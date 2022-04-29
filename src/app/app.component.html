@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-     <div class="reciever">
+    <div class="reciever">
         <div class="recieverInput">
             <label for="">Payment Date</label>
             <input
@@ -63,26 +63,20 @@
         <div class="recieverInput">
             <label class="boldLabel">Amount</label>
             <div>
-                {{ amount | currency: 'KRW' | number  }}
+                {{ amount | currency: 'KRW' }}
             </div>
         </div>
     </div>
-     <div class="reciever">
+    <div class="reciever">
         <div class="recieverInput">
             <label for="">Miles</label>
-            <input
-                placeholder="Enter amount"
-                (input)="onMileChange($event)"
-            />
+            <input placeholder="Enter amount" (input)="onMileChange($event)" />
         </div>
         <div class="recieverInput">
             <label class="boldLabel">Kilo</label>
             <div>
-                {{ miles  }}
+                {{ miles | convert: 'KM' }}
             </div>
         </div>
     </div>
-
-
-
 </mat-card>

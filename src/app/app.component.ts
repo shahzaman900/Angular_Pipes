@@ -12,7 +12,8 @@ export class AppComponent {
     miles: number = 0;
 
     onMileChange(value: any) {
-        this.miles = parseFloat(value);
+        let mile = value.target.value;
+        this.miles = parseInt(mile);
     }
 
     recieverInput(eventNames: any) {

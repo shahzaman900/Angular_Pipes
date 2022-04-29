@@ -5,9 +5,10 @@ import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConvertPipe } from './convert.pipe';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, ConvertPipe],
     imports: [
         BrowserModule,
         AppRoutingModule,
