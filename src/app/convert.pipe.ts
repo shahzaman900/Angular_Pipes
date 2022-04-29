@@ -10,12 +10,12 @@ export class ConvertPipe implements PipeTransform {
         }
 
         switch (targetUnits) {
-            case 'Km':
-                return value * 1.60934;
+            case 'km':
+                return `${value * 1.60934} km`;
             case 'm':
-                return value * 1.60934 * 1000;
-            case 'm':
-                return value * 1.60934 * 1000 * 1000;
+                return `${value * 1.60934 * 1000} m`;
+            case 'cm':
+                return `${value * 1.60934 * 1000 * 1000} cm`;
             default:
                 throw new Error('Target units not supported');
         }
